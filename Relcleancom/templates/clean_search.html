@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Search{% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <center>
+        {% if searched %}
+              <h1> You searched  For {{searched}}</h1>
+                <br/>
+                {% for con in cont%}
+                    {{con}}<br/>
+                {% endfor %}
+
+
+        {% else %}
+             <h1>ohh ! You forget to put the search</h1>
+        {% endif %}
+
+    </center>
+</body>
+</html>
+{% endblock body %}
